@@ -14,6 +14,7 @@
             <th>제목</th>
             <th>작성일시</th>
             <th>id</th>
+            <th>댓글</th>
         </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
                 </td>
                 <td th:text ="${#temporals.format(question.createDate, 'yyyy-MM-dd HH:mm')}"></td>
                 <td th:text ="${question.id}"></td>
+                <td th:text ="${#lists.size(question.answerList)}"></td>
             </tr>
         </tbody>
     </table>
